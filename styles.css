@@ -1,0 +1,140 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    list-style: none;
+    /* outline: 1px solid red; */
+}
+
+:root {
+    --primary-color: rgb(56, 56, 224);
+    --secunday-color: rgb(207, 223, 114);
+}
+
+.row {
+    border: .15px solid black;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    /* align-items: stretch; */
+}
+.row-2 {
+    border: .15px solid black;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    /* align-items: stretch; */
+}
+
+.title {
+    width: auto;
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 2rem;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+}
+
+.column{
+    /* border: 1px solid yellow; */
+    padding: 2rem;
+}
+
+.card {
+    padding: 3rem 1.1rem;
+    text-align: center;
+    background: linear-gradient(0deg, var(--primary-color) 7px, transparent 8px);
+    background-repeat: no-repeat;
+    background-position: 0 .6rem;
+    box-shadow: 0 0 3rem rgba(0, 0, 0, 0.15);
+    border-radius: .5rem;
+    transition: .5s;
+}
+.card-2 {
+    padding: 3rem 1.1rem;
+    text-align: center;
+    background: linear-gradient(0deg, var(--secunday-color) 7px, transparent 8px);
+    background-repeat: no-repeat;
+    background-position: 0 .6rem;
+    box-shadow: 0 0 3rem rgba(0, 0, 0, 0.15);
+    border-radius: .5rem;
+    transition: .5s;
+}
+
+.icon {
+    position: relative;
+    font-size: 2em;
+    height: 4rem;
+    width: 4rem;
+    margin: auto;
+    background-color: var(--primary-color);
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    color: white;
+}
+
+.icon::before{
+    position:absolute;
+    content:"";
+    height: 3rem;
+    width: 3rem;
+    border: 3px solid var(--primary-color);
+    border-radius: 50%;
+    transition: .5s;
+}
+.icon-2 {
+    position: relative;
+    font-size: 2em;
+    height: 4rem;
+    width: 4rem;
+    margin: auto;
+    background-color: var(--secunday-color);
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    color: white;
+}
+
+.icon-2::before{
+    position:absolute;
+    content:"";
+    height: 3rem;
+    width: 3rem;
+    border: 3px solid var(--secunday-color);
+    border-radius: 50%;
+    transition: .5s;
+}
+
+.card h3 {
+    font-size: 1.3rem;
+    margin: 1.5rem 0 1.5rem 0;
+}
+
+.card-2 h3 {
+    font-size: 1.3rem;
+    margin: 1.5rem 0 1.5rem 0;
+}
+
+.card li {
+    font-size: 15px;
+    color: rgb(128, 125, 125);
+    margin: .5rem;
+}
+
+.card:hover{
+    background-position: 0;
+}
+
+.card:hover .icon:before{
+    height: 4.3rem;
+    width: 4.3rem;
+}
+
+.card-2:hover{
+    background-position: 0;
+}
+
+.card-2:hover .icon-2:before{
+    height: 4.3rem;
+    width: 4.3rem;
+}
