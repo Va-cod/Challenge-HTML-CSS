@@ -1,0 +1,317 @@
+/* Definición de la paleta */
+:root {
+  /* TEXT */
+  --text-primary: #000000;
+  --text-secondary: #475569;
+  --text-muted: #94A3B8;
+
+  /* BACKGROUNDS / SECTIONS */
+  --bg-main: #F8FAFC;
+  --bg-section: #5e8392;
+
+  /* HEADER */
+  --header-bg: #0F172A;
+  --header-text: #F1F5F9;
+  --header-border: #1E293B;
+
+  /* HOVER STATES */
+  --hover-primary: #2563EB;
+  --hover-secondary: #14B8A6;
+  --hover-bg: #E0F2FE;
+
+  /* FOOTER */
+  --footer-bg: #020617;
+  --footer-text: #94A3B8;
+  --footer-link: #38BDF8;
+
+  /* CARDS */
+  --card-bg: #FFFFFF;
+  --card-border: #E2E8F0;
+  --card-shadow: rgba(15, 23, 42, 0.08);
+
+  /* BUTTONS */
+  --btn-primary: #3a404b;
+  --btn-primary-hover: #2563EB;
+  --btn-secondary: #14B8A6;
+  --btn-secondary-hover: #0D9488;
+  --btn-text: #FFFFFF;
+
+  /* ICONS */
+  --icon-primary: #3B82F6;
+  --icon-secondary: #14B8A6;
+  --icon-inactive: #94A3B8;
+}
+
+/* Reset page styles */
+body {
+  background-color: var(--bg-main);               /* Page background */
+  margin: 0rem;                                   /* Remove margin */
+  padding: 0rem;                                  /* Remove padding */
+  font-family: sans-serif;
+}
+
+/* Header container */
+.header {
+  background-color: var(--header-bg);           /* Header background */
+  padding: 0.7rem;                              /* Space inside header */
+  display: flex;                                /* Align each item in a row */
+  justify-content: space-between;               /* Space between title and menu */
+  align-items: center;                          /* Center items vertically */
+  flex-wrap: wrap;                              /* Wrap on small screens */
+}
+
+/* Header title */
+.header h1 {
+  color: var(--header-text);                     /* Text color */
+  margin: 0;                                     /* Remove margin */
+  font-size: 1.5rem;                             /* Text size */
+  margin-left: 1rem;
+}
+
+/* Navigation container */
+.header nav {
+  display: flex;                                /* Align each item in a row */
+  flex-wrap: wrap;                              /* Wrap items */
+  gap: 2rem;                                    /* Space between links */
+}
+
+/* Navigation links */
+.header nav a {
+  border-radius: 0.3rem;                        /* Rounded corners */
+  text-decoration: none;                        /* No underline */
+  color: white;                               /* Text color */
+  font-size: 1rem;                              /* Text size */
+  padding: 0.5rem 1rem;                         /* Inner space */
+}
+
+/* Hover effect */
+.header nav a:hover {
+      background-color: var(--header-border);       /* Change color on hover */
+}
+
+/* Hero section */
+.hero_section {
+  padding: 3rem;                               /* Space inside the container */
+  margin: 2rem;                                /* Space outside the container */
+  border-radius: 0.5rem;                       /* Rounded corners */
+  display: flex;                               /* Enables flexbox layout */
+  gap: 2.5rem;                                 /* Space between flex items */
+  align-items: center;                         /* Aligns items vertically in the center */
+  justify-content: space-between;              /* Distributes items with space between them */
+}
+
+/* Container for text content */
+.hero_section div {
+  display: flex;                             /* Enables flexbox */
+  flex-direction: column;                    /* Stacks elements vertically */
+  align-items: center;                       /* Centers items horizontally */
+  flex: 1;                                   /* Allows the div to take available space */
+}
+
+/* Title inside hero */
+.hero_section div h2 {
+  color: rgb(13, 13, 13);                  /* Text color */
+  margin: 0rem;                              /* Removes default margin */
+  font-size: 2rem;                           /* Font size */
+}
+
+/* Paragraph style */
+.hero_section div p {
+  font-size: 1.5rem;                         /* Text size */
+  text-align: justify;                       /* Justifies text */
+  margin: 2rem;                              /* Adds space around the paragraph */
+}
+
+/* Button (link styled as button) */
+.hero_section div a {
+  margin: 0;                                 /* Removes margin */
+  padding: 1rem;                             /* Inner spacing */
+  background-color: var(--btn-primary);      /* Button background color */
+  border-radius: 0.5rem;                     /* Rounded corners */
+  text-decoration: none;                     /* Removes underline */
+  color: var(--btn-text);                     /* Text color */
+}
+
+.hero_section div a:hover {
+  border: 0.15rem solid #020617;
+}
+
+/* Image style */
+.hero_section img {
+  max-width: 20rem;                          /* Maximum width of the image */
+  height: auto;                              /* Maintains aspect ratio */
+  border-radius: 0.8rem;                     /* Rounded corners */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .hero_section {
+      flex-direction: column;               /* Stacks elements vertically on small screens */
+      align-items: center;                  /* Centers items horizontally */
+  }
+}
+
+/*  Feature section  */
+.features {
+  padding: 2rem;
+  background-color: var(--text-secondary);
+  text-align: center;
+  margin: 3em 0rem;
+}
+
+.features h2 {
+  font-size: 2rem;
+  color: var(--text-primary);
+  margin: 2rem;
+}
+
+/*  Grid cards  */
+.features_cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+/* Card */
+.card {
+  background-color: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 16px;
+  padding: 2rem 1.5rem;
+  text-align: left;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.05);
+}
+
+/* Hover */
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.1);
+}
+
+/*  Icon  */
+.icon {
+  position: relative;
+  font-size: 2em;
+  height: 4rem;
+  width: 4rem;
+  margin: 0 auto 1rem;
+  background-color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color:var(--icon-secondary);
+}
+
+.icon i {
+  position: relative;
+  z-index: 1;
+}
+
+.icon::before {
+  position:absolute;
+  content:"";
+  height: 3rem;
+  width: 3rem;
+  border: 3px solid var(--secunday-color);
+  border-radius: 50%;
+  transition: .5s;
+}
+
+/*  Title  */
+.feature_card h3 {
+  font-size: 1.2rem;
+  color: #0F172A;
+  margin-bottom: 0.8rem;
+}
+
+/*  Lista  */
+.feature_card ul {
+  padding-left: 1rem;
+}
+
+.faeture_card li {
+  font-size: 0.9rem;
+  color: #475569;
+  margin-bottom: 0.4rem;
+}
+
+/* Buttom card */
+.btn-primary {
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  background-color: var(--btn-primary);
+  color: var(--btn-text);
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+/* Hover */
+.btn-primary:hover {
+  background-color: var(--btn-primary-hover);
+}
+
+/*  Footer  */
+.footer {
+  background-color: var(--footer-bg);
+  color: var(--footer-text);
+  padding: 3rem 2rem;
+}
+
+/*  Footer main  */
+.footer_main {
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* Columnas */
+.menu {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+}
+
+/* Bloque */
+.elements h2 {
+  font-size: 1rem;
+  margin-bottom: 0.8rem;
+  color: #F1F5F9;
+}
+
+/* Link */
+.elem {
+  list-style: none;
+  margin-bottom: 0.4rem;
+}
+
+.linkss {
+  text-decoration: none;
+  color: var(--footer-text);
+  font-size: 0.9rem;
+  transition: color 0.2s ease;
+}
+
+.linkss:hover {
+  color: var(--footer-link);
+}
+
+.social_media ul {
+    display: flex;
+    justify-content: center;
+}
+
+.social_media ul li {
+    list-style: none;
+}
+
+@media screen and (max-width: 768px) {
+    .row-3 {
+        grid-template-columns: 1fr; 
+    }
+}
