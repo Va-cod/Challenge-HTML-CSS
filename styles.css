@@ -172,6 +172,15 @@ body {
   gap: 2rem;
 }
 
+
+.features_cards_pricing {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+
+
 /* Card */
 .card {
   background-color: #FFFFFF;
@@ -310,8 +319,9 @@ body {
     list-style: none;
 }
 
-@media screen and (max-width: 768px) {
-    .row-3 {
+@media (max-width: 768px) {
+    .features_cards_pricing {
         grid-template-columns: 1fr; 
     }
 }
+
